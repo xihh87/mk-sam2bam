@@ -11,4 +11,5 @@ results/%.bam:		data/%.sam
 		-b \
 		-S \
 		$prereq \
-		-o $target
+		-o $target'.build' \
+	&& mv $target'.build' $target
