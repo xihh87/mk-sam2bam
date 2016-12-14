@@ -9,7 +9,6 @@ results/%.bam:		data/%.sam
 	mkdir -p `dirname $target`
 	samtools  view \
 		-b \
-		-S \
 		$prereq \
 		-o $target'.build' \
 	&& mv $target'.build' $target
